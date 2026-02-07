@@ -20,3 +20,11 @@ target
 # Mac
 .DS_Store
 
+# Notepad++
+nppBackup
+
+# Solace Message Utility
+jszip*js
+solclient*js
+*/jszip*js
+*/solclient*js
