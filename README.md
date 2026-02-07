@@ -1,4 +1,4 @@
-# Solace Queue Browser Web Utility
+# Solace Message Web Utility
 
 ## Overview
 
@@ -23,32 +23,38 @@ Users are expected to know the connection parameters / details.
 1. Modern Browser (only browsers tested with are listed below)
    - Edge 137+
    - Chrome 137+
-   - Firefox 137+
    - Chromium 137+
    - Thorium 130+
-2. Solace Javascript API (Browser) v10.18.2
+2. Solace Javascript API (Browser) v10.18.3
+3. JSZip Library v3.10.1 (optional - only required for bulk download)
 
 ## Installation / Running the App
 
-1. You only need `www/utility.html` from the repository - you can choose to clone the entire repository or only download the `utility.html` file.
+1. You only need `dist/index.html` from the repository - you can choose to clone the entire repository or only download the `index.html` file.
 2. Download Solace Javascript (Browser) API from [Solace Downloads](https://solace.com/downloads/) or [Solace Products](https://products.solace.com/) (login required).
-   - Place `solclient.js` in the same folder as `utility.html` or,
-   - Place `solclient.js` in `js` folder which is of the same directory as `utility.html`.
-3. Open `utility.html` with a modern browser and you are ready to go.
+   - Place `solclient.js` in the same folder as `index.html` or,
+   - Place `solclient.js` in `js` folder which is of the same directory as `index.html`.
+3. Open `index.html` with a modern browser and you are ready to go.
 
 ## Features
 
-1. List messages in Queue
+1. List messages in Queue(s)
 2. View message content
-3. Download message content
+3. Download message(s) content
 4. Delete message(s) from Queue
-5. Supports Basic and OAuth2 login
-6. Supports saving/loading login credentials from local browser storage (excluding password)
-7. Limits browsing to 500MB or 1000 messages (whichever hits first) - pagination features will be available in the future.
+5. Forwad message(s) from Queue
+6. Supports Basic and OAuth2 login
+7. Supports saving/loading login credentials from local browser storage (excluding password)
 8. Search / Filter by Message Content
+9. Search / Filter by Message Headers
+10. Discover / List VPNs & Queues with a Management Connection
 
 > [!NOTE]
 > When connecting to secured (SSL/TLS) endpoints, please ensure the broker server certificate is valid (i.e. CN, SAN, Dates etc. all are correct). Due to limitations of how a browser work, you might not be able to connect to invalid/unvalidated secured endpoints.
+
+## User Guide
+
+Refer to [User Guide](docs/)
 
 ## References
 - https://docs.solace.com/API/Messaging-APIs/JavaScript-API/js-home.htm
